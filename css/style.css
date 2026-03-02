@@ -148,7 +148,8 @@ a:hover{
 }
 
 .persona img{
-    width: 225px;
+    max-width: 50%x;
+    max-height: 50%;
     border-radius: 5px;
     background-color: #0d0097;
     padding: 10px;
