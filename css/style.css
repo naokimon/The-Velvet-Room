@@ -70,18 +70,6 @@ body, html{
     gap: 20vh;
 }
 
-.slideshow{
-    display: flex;
-    padding: 25px;
-    justify-content: start;
-    align-items: center;
-    height: 40vh;
-    width: 40vw;
-    border: var(--border-color) solid 2px;
-    background-image: url(../img/velvet-room.jpg);
-    background-size: cover;
-}
-
 .main-page button{
     font-size: 1.2rem;
     width: 10vw;
@@ -90,6 +78,8 @@ body, html{
     color: var(--text-color);
     border: none;
     border-radius: 25px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
 }
 
 .main-page button:hover{
@@ -97,6 +87,8 @@ body, html{
     color: black;
     border: black solid 2px;
     cursor: pointer;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 a{
@@ -136,6 +128,11 @@ a:hover{
     margin-bottom: 2.5vh;
 }
 
+.persona-page a{
+    color: none;
+    text-decoration: none;
+}
+
 .persona{
     display: flex;
     flex-direction: column;
@@ -146,10 +143,16 @@ a:hover{
     height: 45vh;
     width: 20vw;
     background-color: var(--primary-color);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+}
+
+.persona:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .persona img{
-    max-width: 50%x;
     max-height: 50%;
     border-radius: 5px;
     background-color: #0d0097;
@@ -198,11 +201,13 @@ a:hover{
     background-color: var(--primary-color);
     color: var(--text-color);
     font-size: 1.2rem;
+    transition: 0.75s ease;
 }
 
 .persona-options button:hover{
     cursor: pointer;
-    border-color: var(--secondary-color)
+    border-color: var(--secondary-color);
+    transition: 0.75s ease;
 }
 
 .shopping-cart{
@@ -210,10 +215,12 @@ a:hover{
     height: 50px;
     background-image: url(../img/white-shopping.png);
     background-size: cover;
+    transition: 0.75s ease;
 }
 
 .shopping-cart:hover{
     background-image: url(../img/green-shopping.png);
+    transition: 0.75s ease;
 }
 
 .attendant-page{
@@ -236,11 +243,108 @@ a:hover{
     padding: 5px;
 }
 
+.product-page{
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    height: 85vh; 
+    justify-content: space-between;
+}
+
+.product-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 60vh;
+    width: 40vw;
+    border-radius: 5px;
+}
+
+.product-display img{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+}
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    width: 40vw;
+}
+
+.product-description header{
+    border-bottom: white 2px solid;
+    padding-bottom: 2px;
+}
+
+.description{
+    margin-top: 2vh;
+}
+
+.description ul{
+    list-style: none;
+    line-height: 2.5vh;
+}
+
+.description p{
+    line-height: 3vh;
+}
+
+.product-arcana{
+    font-size: 1.2rem;
+}
+
+.description-about{
+    font-size: 1.4rem;
+}
+
+.description-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-options button{
+    height: 10vh;
+    width: 25vw;
+    border: white solid 4px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.4rem;
+    transition: 0.5s ease;
+}
+
+.description-options button:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: black;
+    border-color: black;
+    transition: 0.5s ease;
+}
+
+.shopping-cartdesc{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/white-shopping.png);
+    background-size: cover;
+    transition: 0.5s ease;
+}
+
+.shopping-cartdesc:hover{
+    background-image: url(../img/green-shopping.png);
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
 .footer{
     display: flex;
     height: 7.5vh;
     background-color: var(--primary-color);
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem
+    font-size: 1.2rem;
 }
