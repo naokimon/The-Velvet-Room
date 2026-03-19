@@ -28,7 +28,7 @@ function removeFromCart(personaId) {
 function showCartFeedback(clickedButton) {
     const original = clickedButton.textContent;
     clickedButton.textContent = "Added to cart!";
-    clickedButton.style.color = "black";
+    clickedButton.style.color = "var(--text-color)";
     setTimeout(() => {
         clickedButton.textContent = original;
         clickedButton.style.color = "";
