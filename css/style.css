@@ -738,6 +738,7 @@ a:hover{
     cursor: pointer;
 }
 
+
 /* voor de tablet op 1024px */
 @media (max-width: 1024px) {
     .persona {
@@ -762,6 +763,34 @@ a:hover{
 
     .product-description {
         width: 45vw;
+    }
+
+    .weapon {
+        width: 28vw;
+    }
+
+    .weapons-options button {
+        width: 18vw;
+    }
+
+    .cart-product {
+        width: 75vw;
+    }
+
+    .cart-productbutton {
+        width: 15vw;
+    }
+
+    .checkout-btn {
+        width: 40vw;
+    }
+
+    .modal-box button {
+        width: 30vw;
+    }
+
+    .search-bar input {
+        width: 60vw;
     }
 }
 
@@ -819,6 +848,26 @@ a:hover{
         font-size: 1.1rem;
     }
 
+    .search-bar {
+        padding: 1.5rem 1rem 0 1rem;
+    }
+
+    .search-bar input {
+        width: 90vw;
+        height: 5.5vh;
+        font-size: 1rem;
+    }
+
+    .sort-bar {
+        padding: 1rem 1rem 0 1rem;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+    }
+
+    .sort-bar select {
+        font-size: 1rem;
+    }
+
     .persona-page {
         height: auto;
         padding: 1.5rem 1rem;
@@ -846,6 +895,30 @@ a:hover{
     .shopping-cart {
         width: 44px;
         height: 44px;
+    }
+
+    .weapon-page {
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .weapon {
+        width: 80vw;
+        height: auto;
+        padding: 1.25rem;
+    }
+
+    .weapon img {
+        max-height: 200px;
+        width: auto;
+    }
+
+    .weapons-options button {
+        width: 55vw;
+        height: 48px;
+        font-size: 1rem;
     }
 
     .product-page {
@@ -913,6 +986,85 @@ a:hover{
         margin-bottom: 0.75rem;
     }
 
+    .cart-page {
+        height: auto;
+        min-height: 75vh;
+    }
+
+    .cart-title {
+        font-size: 1.8em;
+        height: auto;
+        padding: 1.5rem 1.25rem 1rem;
+    }
+
+    .cart-info {
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+        overflow: visible;
+    }
+
+    .cart-product {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.25rem;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-product img {
+        height: 120px;
+    }
+
+    .cart-description {
+        gap: 0.5rem;
+    }
+
+    .cart-productbutton {
+        width: 50vw;
+        height: 7vh;
+        font-size: 1rem;
+    }
+
+    .cart-quantity {
+        justify-content: center;
+    }
+
+    .cart-total {
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .checkout-btn {
+        width: 80vw;
+        height: 7vh;
+        font-size: 1.2rem;
+    }
+
+    .modal-box {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        width: 90vw;
+    }
+
+    .modal-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-box p {
+        font-size: 1.2rem;
+    }
+
+    .modal-box button {
+        width: 70vw;
+        height: 7vh;
+        font-size: 1.1rem;
+    }
+
     .footer {
         height: auto;
         padding: 1rem;
@@ -920,6 +1072,7 @@ a:hover{
     }
 }
 
+/* kleine schermen 480px */
 @media (max-width: 480px) {
 
     .title {
@@ -965,5 +1118,38 @@ a:hover{
     .attendant-description {
         width: 95vw;
         font-size: 1.1rem;
+    }
+
+    .search-bar input {
+        width: 95vw;
+        font-size: 0.95rem;
+    }
+
+    .weapon {
+        width: 92vw;
+    }
+
+    .weapons-options button {
+        width: 65vw;
+    }
+
+    .cart-product {
+        width: 95vw;
+    }
+
+    .cart-productbutton {
+        width: 65vw;
+    }
+
+    .checkout-btn {
+        width: 90vw;
+    }
+
+    .modal-box button {
+        width: 80vw;
+    }
+
+    .cart-title {
+        font-size: 1.4em;
     }
 }

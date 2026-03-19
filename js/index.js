@@ -42,7 +42,7 @@ function renderPersonas(query = "") {
         const div = document.createElement("div");
         div.classList.add("persona");
         div.innerHTML = `
-            <img src="${persona.image}" alt="${persona.name}">
+            <img src="${persona.indexImage}" alt="${persona.name}">
             <article class="persona-info">
                 <h2><a href="pages/product.html?id=${persona.id}">${persona.name}</a></h2>
                 <p>Arcana: ${persona.arcana}</p>
@@ -52,9 +52,6 @@ function renderPersonas(query = "") {
                 <button class="add-to-cart-btn" data-id="${persona.id}">
                     Buy now..?
                 </button>
-                <a href="pages/shoppingcart.html">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         `;
 
@@ -113,7 +110,7 @@ function renderWeapons(query = "") {
             <img src="${weapon.indexImage}" alt="${weapon.name}">
             <article class="weapons-info">
                 <h2><a href="pages/weapon-product.html?id=${weapon.id}">${weapon.name}</a></h2>
-                <p>Type: ${weapon.equipmentType}</p>
+                <p>Type: <a target="_blank" href="https://megatenwiki.com/wiki/${weapon.id}">${weapon.equipmentType}</a></p>
                 <span>${weapon.price}</span>
             </article>
             <article class="weapons-options">
