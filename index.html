@@ -34,6 +34,10 @@
     </header>
 
     <main class="main-page">
+        <video class="cutscene-background" autoplay muted loop playsinline disablepictureinpicture
+            controlslist="nodownload nofullscreen noremoteplayback" style="pointer-events: none;">
+            <source src="videos/full-cutscene.mp4" type="video/mp4">
+        </video>
         <div class="site-name">
             <img src="img/velvet-room-icon.png" alt="">
             <span>
@@ -48,9 +52,13 @@
         </button>
     </main>
 
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search through personas and weapons..." oninput="handleSearch()">
+    </div>
+
     <div class="sort-bar">
         <label>Sort by:</label>
-        <select id="sort-select" onchange="renderPersonas()">
+        <select id="sort-select" onchange="renderPersonas(document.getElementById('search-input').value.toLowerCase().trim())">
             <option value="default">Default</option>
             <option value="name-asc">Name A-Z</option>
             <option value="name-desc">Name Z-A</option>
@@ -59,8 +67,22 @@
             <option value="arcana">Arcana</option>
         </select>
     </div>
-    <main class="persona-page" id="persona-page">
 
+    <main class="persona-page" id="persona-page"></main>
+
+    <div class="sort-bar">
+        <label>Sort by:</label>
+        <select id="weapon-sort-select" onchange="renderWeapons(document.getElementById('search-input').value.toLowerCase().trim())">
+            <option value="default">Default</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+            <option value="price-asc">Price Low-High</option>
+            <option value="price-desc">Price High-Low</option>
+            <option value="type">Type</option>
+        </select>
+    </div>
+
+    <main class="weapon-page" id="weapons-page">
     </main>
 
     <footer class="footer">
@@ -71,15 +93,9 @@
 
     <script src="js/utils.js"></script>
     <script src="js/personas.js"></script>
+    <script src="js/weapons.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/index.js"></script>
-    <script>
-        document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                addToCart(btn.dataset.id, btn);
-            });
-        });
-    </script>
 </body>
 
 </html>

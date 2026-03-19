@@ -2,7 +2,8 @@ const personas = [
     {
         id: "izanagi-no-okami",
         name: "Izanagi-No-Okami",
-        image: "../img/personas/Izanagi-No-OkamiBO.png",
+        image: "../img/personas/izanagi-no-okami.png",
+        indexImage: "img/personas/izanagi-no-okami.png",
         arcana: "World",
         price: "¥370,000",
         stats: {
@@ -17,7 +18,8 @@ const personas = [
     {
         id: "himiko",
         name: "Himiko",
-        image: '../img/personas/himikoBO.webp',
+        image: "../img/personas/himiko.webp",
+        indexImage: "img/personas/himiko.webp",
         arcana: "Lovers",
         price: "¥120,000",
         stats: {
@@ -32,7 +34,8 @@ const personas = [
     {
         id: "dominating-machine",
         name: "Dominating Machine",
-        image: "../img/personas/Dominating-machineBO.png",
+        image: "../img/personas/dominating-machine.png",
+        indexImage: "img/personas/dominating-machine.png",
         arcana: "Justice",
         price: "¥300,000",
         stats: {
@@ -47,7 +50,8 @@ const personas = [
     {
         id: "jiraiya",
         name: "Jiraiya",
-        image: "../img/personas/jiraiyaBO.webp",
+        image: "../img/personas/jiraiya.webp",
+        indexImage: "img/personas/jiraiya.webp",
         arcana: "Magician",
         price: "¥180,000",
         stats: {
@@ -62,7 +66,8 @@ const personas = [
     {
         id: "konohana-sakuya",
         name: "Konohana Sakuya",
-        image: "../img/personas/Konohana-SakuyaBO.webp",
+        image: "../img/personas/konohana-sakuya.webp",
+        indexImage: "img/personas/konohana-sakuya.webp",
         arcana: "Magician",
         price: "¥150,000",
         stats: {
@@ -77,7 +82,8 @@ const personas = [
     {
         id: "magatsu-izanagi",
         name: "Magatsu Izanagi",
-        image: "../img/personas/magatsu-izanagiBO.png",
+        image: "../img/personas/magatsu-izanagi.png",
+        indexImage: "img/personas/magatsu-izanagi.png",
         arcana: "Hunger",
         price: "¥260,000",
         stats: {
@@ -92,7 +98,8 @@ const personas = [
     {
         id: "reaper",
         name: "Reaper",
-        image: "../img/personas/reaperBO.png",
+        image: "../img/personas/reaper.png",
+        indexImage: "img/personas/reaper.png",
         arcana: "Death",
         price: "¥999,999",
         stats: {
@@ -107,7 +114,8 @@ const personas = [
     {
         id: "take-mikazuchi",
         name: "Take Mikazuchi",
-        image: "../img/personas/take-mikazuchiBO.png",
+        image: "../img/personas/take-mikazuchi.png",
+        indexImage: "img/personas/take-mikazuchi.png",
         arcana: "Emperor",
         price: "¥190,000",
         stats: {

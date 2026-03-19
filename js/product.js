@@ -19,6 +19,7 @@ function loadPersona() {
 
   document.title = `The Velvet Room - ${persona.name}`;
   document.getElementById("persona-image").src = persona.image;
+  document.getElementById("persona-indexImage").src = persona.indexImage
   document.getElementById("persona-image").alt = persona.name;
   document.getElementById("persona-name").textContent = persona.name;
   document.getElementById("persona-arcana").textContent = `Arcana: ${persona.arcana}`;

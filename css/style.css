@@ -69,6 +69,18 @@ body, html{
     justify-content: center;
     align-items: center;
     gap: 20vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cutscene-background{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.4;
 }
 
 .main-page button{
@@ -79,8 +91,7 @@ body, html{
     color: var(--text-color);
     border: none;
     border-radius: 25px;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
 }
 
 .main-page button:hover{
@@ -94,6 +105,7 @@ body, html{
 
 a{
     color: var(--text-color);
+    text-decoration: none;
 }
 
 a:hover{
@@ -117,6 +129,12 @@ a:hover{
 
 .site-name p{
     color: rgba(255, 255, 255, 0.67);
+}
+
+.main-page .site-name,
+.main-page button {
+    z-index: 1;
+    position: relative;
 }
 
 .persona-page{
@@ -144,8 +162,7 @@ a:hover{
     height: 45vh;
     width: 20vw;
     background-color: var(--primary-color);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
 }
 
 .persona:hover {
@@ -187,11 +204,6 @@ a:hover{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-}
-
-.persona-options img{
-    width: 50px;
-    background-color: var(--primary-color)
 }
 
 .persona-options button{
@@ -240,6 +252,34 @@ a:hover{
     color: var(--text-color);
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2.5rem 0 2.5rem;
+}
+
+.search-bar input {
+    width: 40vw;
+    height: 6vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: var(--border-color) solid 2px;
+    border-radius: 25px;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    font-family: "Mongolian Baiti";
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: var(--secondary-color);
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
 .shopping-cart{
     width: 50px;
     height: 50px;
@@ -250,6 +290,89 @@ a:hover{
 
 .shopping-cart:hover{
     background-image: url(../img/green-shopping.png);
+    transition: 0.75s;
+}
+
+.weapon-page{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 2rem;
+    gap: 2.5vw;
+    flex-wrap: wrap;
+    margin-bottom: 2.5vh;
+}
+
+.weapon-page a{
+    color: none;
+    text-decoration: none;
+}
+
+.weapon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 45vh;
+    width: 20vw;
+    background-color: var(--primary-color);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.weapon:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.weapon img{
+    max-height: 50%;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #0d0097;
+    padding: 10px;
+}
+
+.weapons-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-left: solid var(--border-color) 5px;
+    padding: 10px;
+    gap: 5px;
+}
+
+.weapons-info a{
+    text-decoration: none;
+}
+
+.weapons-info span{
+    font-size: 1.6rem;
+}
+
+.weapons-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.weapons-options button{
+    height: 50px;
+    width: 12.5vw;
+    border: white solid 4px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: 0.75s ease;
+}
+
+.weapons-options button:hover{
+    cursor: pointer;
+    border-color: var(--secondary-color);
     transition: 0.75s;
 }
 
@@ -447,7 +570,7 @@ a:hover{
 }
 
 .cart-producttitle{
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 
 .cart-productarcana{
