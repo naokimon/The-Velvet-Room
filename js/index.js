@@ -136,3 +136,14 @@ function handleSearch() {
 
 renderPersonas();
 renderWeapons();
+
+// soms doet de browser raar en autoplayed hij niet, als iemand nu ergens klikt op het scherm speelt ie automatisch ez fix
+const video = document.querySelector(".cutscene-background");
+
+if (video) {
+    video.play().catch(() => {
+        document.addEventListener("touchstart", () => {
+            video.play();
+        }, { once: true });
+    });
+}   
