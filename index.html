@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
 
 <body>
-    <script src="js/utils.js"></script>
     <header class="hero" id="home">
         <div class="title">
             <h1>
@@ -26,8 +25,8 @@
                 <li><a href="#persona-page">Persona's</a></li>
                 <li><a href="#weapons-page">Weapons</a></li>
                 <li><a href="pages/attendants.html">Attendants</a></li>
-                <li><a href="#">FAQ</a></li>
                 <li><a href="#">Find us</a></li>
+                <li><a href="pages/shoppingcart.html"><div class="shopping-cart"></div></a></li>
             </ul>
         </nav>
     </header>
@@ -62,12 +61,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="izanagi-no-okami" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -85,12 +81,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="himiko" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -108,12 +101,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="dominating-machine" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -131,12 +121,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="jiraiya" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -147,19 +134,17 @@
                     <a href="pages/product.html?id=konohana-sakuya">Konohana Sakuya</a>
                 </h2>
                 <p>
-                    Arcana: <a href="https://megamitensei.fandom.com/wiki/Priestess_Arcana" target="_blank">Priestess</a>
+                    Arcana: <a href="https://megamitensei.fandom.com/wiki/Priestess_Arcana"
+                        target="_blank">Priestess</a>
                 </p>
                 <span>
                     ¥150,000
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="konohana-sakuya" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -177,12 +162,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="magatsu-izanagi" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -200,12 +182,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="reaper" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
 
@@ -223,12 +202,9 @@
                 </span>
             </article>
             <article class="persona-options">
-                <button>
+                <button data-id="take-mikazuchi" class="add-to-cart-btn" id="cart-feedback">
                     Buy now..?
                 </button>
-                <a href="">
-                    <div class="shopping-cart"></div>
-                </a>
             </article>
         </div>
     </main>
@@ -238,6 +214,17 @@
             Made by <a href="https://github.com/naokimon" target="_blank">&#169;Naokimon</a>
         </p>
     </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/personas.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                addToCart(btn.dataset.id, btn);
+            });
+        });
+    </script>
 </body>
 
 </html>

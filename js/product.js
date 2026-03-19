@@ -8,17 +8,22 @@ function loadPersona() {
   const persona = personas.find(p => p.id === id);
 
   if (!persona) {
-    document.querySelector(".product-page").innerHTML = "<p>Persona not found.</p</br><p>Return back to Home</p>";
+    document.querySelector(".product-page").innerHTML = `
+            <div style="text-align:center; padding: 4rem; font-size: 1.6rem;">
+                <p>Persona not found.</p>
+                <a href="../index.html">Return home</a>
+            </div>
+        `;
     return;
   }
 
+  document.title = `The Velvet Room - ${persona.name}`;
   document.getElementById("persona-image").src = persona.image;
   document.getElementById("persona-image").alt = persona.name;
   document.getElementById("persona-name").textContent = persona.name;
   document.getElementById("persona-arcana").textContent = `Arcana: ${persona.arcana}`;
-  document.getElementById("persona-price").textContent = `Buy now for ${persona.price}`;
   document.getElementById("persona-description").textContent = persona.description;
-  document.getElementById("persona-title").textContent = `The Velvet Room - ${persona.name}`
+  document.getElementById("persona-price").textContent = `Buy now for ${persona.price}`;
 
   const statsList = document.getElementById("persona-stats");
   statsList.innerHTML = "";
@@ -27,6 +32,13 @@ function loadPersona() {
     li.textContent = `${stat.charAt(0).toUpperCase() + stat.slice(1)}: ${value}`;
     statsList.appendChild(li);
   }
+
+  document.getElementById("persona-price").addEventListener("click", (e) => {
+    addToCart(persona.id, e.currentTarget);
+});
+
+
+  document.querySelector(".shopping-cartdesc").parentElement.href = "shoppingcart.html";
 }
 
 loadPersona();

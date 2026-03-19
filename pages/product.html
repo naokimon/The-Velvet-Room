@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="../img/velvet-room-icon.ico" type="image/x-icon">
 </head>
 <body>
-    <script src="../js/personas.js"></script>
-    <script src="../js/product.js"></script>
     <header class="hero">
         <div class="title">
             <h1>The Velvet Room</h1>
@@ -21,8 +19,8 @@
                 <li><a href="../index.html#persona-page">Persona's</a></li>
                 <li><a href="#weapons-page">Weapons</a></li>
                 <li><a href="attendants.html">Attendants</a></li>
-                <li><a href="#">FAQ</a></li>
                 <li><a href="#">Find us</a></li>
+                <li><a href="shoppingcart.html"><div class="shopping-cart"></div></a></li>
             </ul>
         </nav>
     </header>
@@ -49,14 +47,20 @@
 
             <div class="description-options">
                 <button id="persona-price"></button>
-                <a href="#">
+                <a href="cart.html">
                     <div class="shopping-cartdesc"></div>
                 </a>
             </div>
+
+            <span id="cart-feedback" class="cart-feedback">
+                Added to cart!
+            </span>
         </section>
     </main>
 
     <script src="../js/personas.js"></script>
     <script src="../js/product.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cart-page.js"></script>
 </body>
 </html>
